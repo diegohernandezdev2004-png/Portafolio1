@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Developer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Activity Bar (Leftmost icon strip) -->
+        <aside class="activity-bar">
+            <div class="activity-icon active" title="Explorer">
+                <i class="far fa-copy"></i>
+            </div>
+            <div class="activity-icon" title="Search">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="activity-icon" title="Source Control">
+                <i class="fas fa-code-branch"></i>
+            </div>
+            <div class="activity-icon" title="Extensions">
+                <i class="fas fa-th-large"></i>
+            </div>
+            <div class="spacer"></div>
+            <div class="activity-icon" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </div>
+            <div class="activity-icon" title="Settings">
+                <i class="fas fa-cog"></i>
+            </div>
+        </aside>
+
+        <!-- Sidebar (File Explorer) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span>EXPLORADOR</span>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+            <div class="sidebar-content">
+                <div class="explorer-section">
+                    <div class="section-header open">
+                        <i class="fas fa-chevron-down"></i>
+                        <span>PORTAFOLIO</span>
+                    </div>
+                    <div class="file-list">
+                        <div class="file-item" data-file="readme">
+                            <i class="fab fa-markdown readme-icon"></i>
+                            <span>README.md</span>
+                        </div>
+                        <div class="file-item active" data-file="inicio">
+                            <i class="fab fa-react react-icon"></i>
+                            <span>inicio.jsx</span>
+                        </div>
+                        <div class="file-item" data-file="sobre-mi">
+                            <i class="fas fa-user-circle user-icon"></i>
+                            <span>sobre-mi.jsx</span>
+                        </div>
+                        <div class="file-item" data-file="proyectos">
+                            <i class="fas fa-folder projects-icon"></i>
+                            <span>proyectos.jsx</span>
+                        </div>
+                        <div class="file-item" data-file="habilidades">
+                            <i class="fas fa-bolt skills-icon"></i>
+                            <span>habilidades.jsx</span>
+                        </div>
+                        <div class="file-item" data-file="contacto">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <span>contacto.jsx</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Editor Area -->
+        <main class="editor-area">
+            <!-- Tabs -->
+            <div class="editor-tabs">
+                <div class="tab active" data-file="inicio">
+                    <i class="fab fa-react react-icon"></i>
+                    <span>inicio.jsx</span>
+                    <i class="fas fa-times close-tab"></i>
+                </div>
+            </div>
+
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs">
+                <span>portafolio</span>
+                <i class="fas fa-chevron-right"></i>
+                <span>inicio.jsx</span>
+            </div>
+
+            <!-- Code Content Container -->
+            <div class="code-container" id="content-area">
+                <!-- Content will be injected here by JS -->
+            </div>
+        </main>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <div class="status-left">
+                <div class="status-item"><i class="fas fa-code-branch"></i> main*</div>
+                <div class="status-item"><i class="far fa-times-circle"></i> 0</div>
+                <div class="status-item"><i class="fas fa-exclamation-triangle"></i> 0</div>
+            </div>
+            <div class="status-right">
+                <div class="status-item">Ln 1, Col 1</div>
+                <div class="status-item">UTF-8</div>
+                <div class="status-item">C#</div>
+                <div class="status-item"><i class="far fa-bell"></i></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Templates for different files -->
+    <template id="tpl-readme">
+        <div class="code-line"><span class="line-num">1</span><span class="md-heading"># 🚀 Guía de Inicio Rápido</span>
+        </div>
+        <div class="code-line"><span class="line-num">2</span></div>
+        <div class="code-line"><span class="line-num">3</span><span class="md-heading">## Estado del
+                Desarrollador</span></div>
+        <div class="code-line"><span class="line-num">4</span></div>
+        <div class="code-line"><span class="line-num">5</span><span class="comment">&lt;!-- Initializing Developer
+                Profile... --&gt;</span></div>
+        <div class="code-line"><span class="line-num">6</span><span class="comment">&lt;!-- Loading Main Modules...
+                --&gt;</span></div>
+        <div class="code-line"><span class="line-num">7</span></div>
+        <div class="code-line"><span class="line-num">8</span><span class="md-list">-</span> <span
+                class="md-bold">**Stack Principal**</span>: <span class="md-code">C#</span>, <span
+                class="md-code">ASP.NET Core</span>, <span class="md-code">SQL Server</span></div>
+        <div class="code-line"><span class="line-num">9</span><span class="md-list">-</span> <span
+                class="md-bold">**Enfoque actual**</span>: Arquitectura de software y sistemas de gestión (ERP/RRHH)
+        </div>
+        <div class="code-line"><span class="line-num">10</span><span class="md-list">-</span> <span
+                class="md-bold">**Ubicación**</span>: El Salvador 🇸🇻</div>
+        <div class="code-line"><span class="line-num">11</span></div>
+        <div class="code-line"><span class="line-num">12</span><span class="md-link">[Run diagnostics...]</span></div>
+        <div class="code-line"><span class="line-num">13</span></div>
+        <div class="code-line"><span class="line-num">14</span><span class="md-text">Bienvenido a mi entorno de
+                desarrollo. Navega por los archivos en el</span></div>
+        <div class="code-line"><span class="line-num">15</span><span class="md-text">explorador para ver mis proyectos y
+                habilidades.</span></div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
