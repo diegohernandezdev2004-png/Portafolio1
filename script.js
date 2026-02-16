@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div class="info-card download-section">
                 <p>Si querés conocer más sobre mi experiencia y formación:</p>
-                <button class="btn-download"><i class="fas fa-download"></i> Descargar CV</button>
+                <a href="CV_Diego_Hernandez.pdf" download="CV_Diego_Hernandez.pdf" target="_blank" class="btn-download" style="text-decoration: none; color: #1e1e1e; display: flex; align-items: center; gap: 8px;"><i class="fas fa-download"></i> Descargar CV</a>
             </div>
 
             <div class="code-line">}</div>
@@ -438,6 +438,39 @@ document.addEventListener('DOMContentLoaded', () => {
                     </a>
                     <a href="https://academienroll.shop/" target="_blank" class="project-link">
                         <i class="fas fa-external-link-alt"></i> Demo
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Portafolio Personal Card -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Portafolio Web Personal</h3>
+                </div>
+                <div class="project-subheader">
+                    Sitio Web Profesional de Presentación
+                </div>
+                 
+                <div class="project-desc">
+                    <span class="section-label">Core:</span>
+                    Exhibición de proyectos, habilidades técnicas y experiencia en desarrollo de software.
+
+                    <span class="section-label">UI/UX:</span>
+                    Diseño responsivo, navegación moderna y secciones dinámicas optimizadas para dispositivos móviles.
+
+                    <span class="section-label">Contacto:</span>
+                    Formulario funcional con envío de correos y descarga de CV en PDF.
+                </div>
+
+                <div class="project-tech-stack">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/diegohernandezdev2004-png/Portafolio" target="_blank" class="project-link">
+                         <i class="fab fa-github"></i> Código
                     </a>
                 </div>
             </div>
