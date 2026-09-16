@@ -279,6 +279,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="info-card">
                 <h3 class="card-title title-blue">Experiencia</h3>
                 <div class="exp-item">
+                    <p class="exp-role">Desarrollador / QA – Asesuisa (Enero 2026 - Actualidad)</p>
+                    <p class="exp-desc">Mantenimiento de aplicaciones en .NET, Visual Basic y React, gestión de bases de datos y ejecución de pruebas QA.</p>
+                </div>
+                <div class="exp-item">
                     <p class="exp-role">Soporte Técnico – QUAPE (6 meses)</p>
                     <p class="exp-desc">Soporte a usuarios, mantenimiento de equipos y resolución de incidencias.</p>
                 </div>
